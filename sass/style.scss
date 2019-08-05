@@ -4,14 +4,26 @@ $widthLogo: 125px;
 $headerHeight: 110px;
 $contentWidth: 1100px;
 
+$font1: "Bebas Neue";
+$font2: 'Open Sans', sans-serif;
+
 @font-face {
-  font-family: "Bebas Neue";
+  font-family: $font1;
   src: url(../Fonts/BebasNeue-Regular.otf);
 }
 
 body {
+  width: 100%;
+  margin: 0 auto;
+}
 
+main {
+  width: 100%;
+  margin: 0 auto;
+}
 
+article {
+  margin-bottom: 100px;
 }
 
 .grid-containerHeader {
@@ -34,7 +46,7 @@ body {
 
   h1:nth-child(n+1) { //HOTEL
     // Text style for "hotel"
-    font-family: "Bebas Neue";
+    font-family: $font1;
     color: #000000;
     font-size: 30px;
     letter-spacing: 2.04px;
@@ -63,7 +75,7 @@ body {
 
   h1:nth-child(n+2) {
     // Style for "Amar"
-    font-family: "Bebas Neue";
+    font-family: $font1;
     height: 53px;
     color: #4e26fd;
     font-size: 41px;
@@ -102,7 +114,7 @@ body {
     text-decoration: none;
     // Style for "home"
     color: #0f0f0f;
-    font-family: "Bebas Neue";
+    font-family: $font1;
     font-size: 16px;
     font-weight: 400;
     text-transform: uppercase;
@@ -136,7 +148,7 @@ body {
       // Style for "Perfection"]
       margin-left: 16%;
       color: #000000;
-      font-family: "Bebas Neue";
+      font-family: $font1;
       font-size: 55px;
       font-weight: 400;
       line-height: 88.51px;
@@ -151,7 +163,7 @@ body {
       margin-bottom: 0px;
       color: #ffffff;
       font-size: 112px;
-      font-family: "Bebas Neue";
+      font-family: $font1;
       font-size: 70px;
       font-weight: 400;
       line-height: 88.51px;
@@ -187,7 +199,7 @@ body {
 }
 
 .classBookNow {
-  font-family: 'Open Sans', sans-serif;
+  font-family: $font2;
   width: $contentWidth;
   background-color: #1c1c1c;
   border-bottom: 11px solid #4e26fd;
@@ -219,7 +231,7 @@ body {
     vertical-align: bottom;
     // Style for "Book Now"
     color: #ffffff;
-    font-family: "Bebas Neue";
+    font-family: $font1;
     font-size: 20px;
     font-weight: 400;
     // Text style for "B, ook Now"
@@ -238,7 +250,6 @@ body {
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 70px 1fr 1fr 70px;
   margin: 0 auto;
-  margin-top: 100px;
 
   section {
     img {
@@ -262,11 +273,46 @@ body {
       margin: 0 auto;
       text-align: center;
       color: #000000;
-      font-family: "Bebas Neue";
+      font-family: $font1;
       font-size: 55px;
       font-weight: 400;
       // Text style for "AWARD WINN"
       letter-spacing: 3.3px;
+    }
+  }
+
+  section {
+    img {
+      width: 353px;
+      height: 241px;
+    }
+
+    h6 {
+      margin: 30px 0px 0px 0px;
+      text-align: center;
+
+
+      color: #010101;
+      font-family: $font2;
+      font-size: 16px;
+      font-weight: 700;
+      line-height: 24px;
+      // Text style for "Middle of"
+      letter-spacing: 0.64px;
+    }
+
+    p {
+      margin: 12px 0px 40px 0px;
+
+      // Style for "We fill th"
+
+      color: #010101;
+      font-family: $font2;
+      font-size: 16px;
+      font-weight: 300;
+      line-height: 24px;
+      // Text style for "We fill th"
+      letter-spacing: 0.64px;
     }
   }
 
@@ -287,13 +333,90 @@ body {
       margin: 0;
       display: inline-block;
       color: #4e26fd;
-      font-family: "Bebas Neue";
+      font-family: $font1;
       font-size: 24px;
       font-weight: 400;
       letter-spacing: 1.44px;
 
       text-align: center;
     }
+  }
+
+}
+
+.grid-containerArticle3 {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 130px 1fr;
+  padding-top: 50px;
+  width: 100%;
+  height: 700px;
+
+  .art3head {
+    grid-column: 1 / span 5;
+    grid-row: 1;
+
+    h1 {
+      // Style for "Winter act"
+      margin: 0 auto;
+      text-align: center;
+      color: #000000;
+      font-family: $font1;
+      font-size: 80px;
+      font-weight: 400;
+      line-height: 69.4px;
+      letter-spacing: 2.51px;
+    }
+  }
+
+
+  //background-color background-image background-repeat background-attachment
+  //		background-position / background-size background-origin background-clip;
+
+
+  .sect1art3 {
+    background: linear-gradient(to top, rgba(0,0,0, 1) -33%, rgba(255, 255, 255, 0) 41%), black url(../images/sect1art3.png) no-repeat scroll center/cover border-box border-box;
+  }
+
+  .sect2art3 {
+    background: linear-gradient(to top, rgba(0,0,0, 1) -33%, rgba(255, 255, 255, 0) 41%), black url(../images/sect2art3.png) no-repeat scroll center/cover border-box border-box;
+  }
+
+  .sect3art3 {
+    background: linear-gradient(to top, rgba(0,0,0, 1) -33%, rgba(255, 255, 255, 0) 41%), black url(../images/sect3art3.png) no-repeat scroll center/cover border-box border-box;
+  }
+
+  .sect4art3 {
+    background: linear-gradient(to top, rgba(0,0,0, 1) -33%, rgba(255, 255, 255, 0) 41%), black url(../images/sect4art3.png) no-repeat scroll center/cover border-box border-box;
+  }
+
+  .sect5art3 {
+    background: linear-gradient(to top, rgba(0,0,0, 1) -33%, rgba(255, 255, 255, 0) 41%), black url(../images/sect5art3.png) no-repeat scroll center/cover border-box border-box;
+  }
+
+
+  h2 {
+    // Style for "Skiing"\
+    margin-top: 450px;
+    margin-left: 20px;
+    margin-bottom: 5px;
+    color: #ffffff;
+    font-family: $font1;
+    font-size: 50px;
+    font-weight: 400;
+    line-height: 55px;
+    text-transform: uppercase;
+  }
+
+  p {
+    // Style for "We fill th"
+    margin-left: 20px;
+    color: #ffffff;
+    font-family: $font2;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 24px;
+    letter-spacing: 0.64px;
   }
 
 }
