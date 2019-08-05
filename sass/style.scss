@@ -1,0 +1,300 @@
+$marginContent1: 180px;
+$marginContent2: 0;
+$widthLogo: 125px;
+$headerHeight: 110px;
+$contentWidth: 1100px;
+
+@font-face {
+  font-family: "Bebas Neue";
+  src: url(../Fonts/BebasNeue-Regular.otf);
+}
+
+body {
+
+
+}
+
+.grid-containerHeader {
+  display: grid;
+  grid-template-areas: "logo navbar";
+  grid-template-columns: 1fr 3fr;
+  grid-template-rows: $headerHeight;
+  margin: 0 auto;
+  width: $contentWidth;
+}
+
+.logo {
+  grid-area: logo;
+
+  .hotelStars {
+    margin-top: 20px;
+    display: inline-block;
+    width: $widthLogo;
+  }
+
+  h1:nth-child(n+1) { //HOTEL
+    // Text style for "hotel"
+    font-family: "Bebas Neue";
+    color: #000000;
+    font-size: 30px;
+    letter-spacing: 2.04px;
+    float: left;
+    margin: 0;
+  }
+
+  .logoStars {
+    margin-left: 90px;
+    margin-top: 5px;
+
+    img:nth-child(n+1) {
+      margin-bottom: 0px;
+    }
+
+    img:nth-child(n+2) {
+      margin-top: -10px;
+      margin-bottom: 15px;
+      margin-left: -5px;
+    }
+
+    img:nth-child(n+3) {
+      margin-bottom: 0px;
+    }
+  }
+
+  h1:nth-child(n+2) {
+    // Style for "Amar"
+    font-family: "Bebas Neue";
+    height: 53px;
+    color: #4e26fd;
+    font-size: 41px;
+    font-weight: 400;
+    line-height: 32.11px;
+    // Text style for "Amarica"
+    letter-spacing: 2.75px;
+  }
+}
+
+.navbar {
+  grid-area: navbar;
+}
+
+/* navbar-> */
+
+.navbar {
+  margin-top: 40px;
+  justify-self: end;
+}
+
+.navbar ul li {
+  list-style-type: none;
+  display: inline-block;
+  float: left;
+}
+
+.navbar ul li a:hover {
+  border-bottom: 1px solid black;
+}
+
+
+.navbar ul li {
+  a {
+    margin-left: 25px;
+    text-decoration: none;
+    // Style for "home"
+    color: #0f0f0f;
+    font-family: "Bebas Neue";
+    font-size: 16px;
+    font-weight: 400;
+    text-transform: uppercase;
+    // Text style for "home"
+    letter-spacing: 1.12px;
+  }
+}
+
+.grid-containerArticle1 {
+  display: grid;
+  grid-template-areas: "image1 image2" "image1 image3";
+  grid-template-columns: 2fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  grid-gap: 0px;
+  margin: 0 auto;
+  padding: 0;
+  width: 100%;
+  height: 690px;
+
+  .image1 {
+    grid-area: image1;
+
+    img {
+      object-fit: cover;
+      height: calc(100% - 100px);
+      width: 100%;
+    }
+
+
+    h2 {
+      // Style for "Perfection"]
+      margin-left: 16%;
+      color: #000000;
+      font-family: "Bebas Neue";
+      font-size: 55px;
+      font-weight: 400;
+      line-height: 88.51px;
+      text-transform: uppercase;
+      margin-top: 3px;
+    }
+
+    h1 {
+      // Text style for "P, erfecti"
+      margin-left: 16%;
+      margin-top: -100px;
+      margin-bottom: 0px;
+      color: #ffffff;
+      font-size: 112px;
+      font-family: "Bebas Neue";
+      font-size: 70px;
+      font-weight: 400;
+      line-height: 88.51px;
+      text-transform: uppercase;
+    }
+  }
+
+  .image2 {
+    margin: 0;
+    padding: 0;
+
+    img {
+      object-fit: cover;
+      margin: 0;
+      padding: 0;
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  .image3 {
+    margin: 0;
+    padding: 0;
+
+    img {
+      object-fit: cover;
+      margin: 0;
+      padding: 0;
+      width: 100%;
+      height: 100%;
+    }
+  }
+}
+
+.classBookNow {
+  font-family: 'Open Sans', sans-serif;
+  width: $contentWidth;
+  background-color: #1c1c1c;
+  border-bottom: 11px solid #4e26fd;
+  padding: 30px;
+  margin: 0 auto;
+  margin-top: 50px;
+
+  input[type="text"] {
+    width: 190px;
+    height: 49px;
+    background-color: white;
+    margin-right: 13px;
+    padding-left: 17px;
+    // Style for "Departure"
+    color: #000000;
+    font-family: "Open Sans";
+    font-size: 17px;
+    font-weight: 400;
+    // Text style for "Departure"
+    letter-spacing: 1.02px;
+  }
+
+  input[type="submit"] {
+    // Style for "Rectangle"
+    padding-left: 0px;
+    height: 55px;
+    width: 167px;
+    background-color: #4e26fd;
+    vertical-align: bottom;
+    // Style for "Book Now"
+    color: #ffffff;
+    font-family: "Bebas Neue";
+    font-size: 20px;
+    font-weight: 400;
+    // Text style for "B, ook Now"
+    letter-spacing: 1.2px;
+    border: none;
+  }
+
+}
+
+.grid-containerArticle2 {
+
+
+  width: $contentWidth;
+  height: 920px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 70px 1fr 1fr 70px;
+  margin: 0 auto;
+  margin-top: 100px;
+
+  section {
+    img {
+      display: grid;
+      // Style for "Layer 2"
+      width: 353px;
+      height: 241px;
+      object-fit: cover;
+    }
+
+    display: grid;
+
+
+  }
+
+  .art2head {
+    grid-column: 1 / span 3;
+    grid-row: 1;
+
+    h1 {
+      margin: 0 auto;
+      text-align: center;
+      color: #000000;
+      font-family: "Bebas Neue";
+      font-size: 55px;
+      font-weight: 400;
+      // Text style for "AWARD WINN"
+      letter-spacing: 3.3px;
+    }
+  }
+
+  .moreButton {
+    margin: 0 auto;
+    display: grid;
+    grid-column: 1 / span 3;
+    grid-row: 4;
+    horiz-align: center;
+    // Style for "Rectangle"
+
+    width: 173px;
+    height: 52px;
+    border: 2px solid #4e26fd;
+
+    h2 {
+      line-height: 2.3;
+      margin: 0;
+      display: inline-block;
+      color: #4e26fd;
+      font-family: "Bebas Neue";
+      font-size: 24px;
+      font-weight: 400;
+      letter-spacing: 1.44px;
+
+      text-align: center;
+    }
+  }
+
+}
+
